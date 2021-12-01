@@ -14,4 +14,7 @@ TEST_CASE("makeVector tests")
 
   v = makeVector(0);
   CHECK(v.empty());
+
+  v = makeVector(-5);
+  CHECK(v.empty());
 }
