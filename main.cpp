@@ -29,4 +29,25 @@ int main()
     else
       std::cout << ", ";
   }
+
+  //task C
+  std::cout << "\nTask C\n" << '\n';
+
+  std::vector<int> c1{1, 2, 3};
+  std::cout << "c1 = {1, 2, 3}" << '\n';
+  std::vector<int> c2{4, 5};
+  std::cout << "c2 = {4, 5}" << '\n';
+
+  gogeta(c1, c2);
+  std::cout << "\nAfter calling gogeta(c1, c2)" << '\n';
+  std::cout << "c1 = {";
+  for (int i = 0; i < c1.size(); i++)
+  {
+    std::cout << c1[i];
+    if (c1[i] == c1.back())
+      std::cout << "}" << '\n';
+    else
+      std::cout << ", ";
+  }
+  std::cout << "c2.empty() = " << c2.empty() << '\n';
 }

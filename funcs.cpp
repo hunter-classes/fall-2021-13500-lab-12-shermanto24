@@ -21,3 +21,12 @@ std::vector<int> goodVibes(const std::vector<int> &v)
       result.push_back(v[i]);
   return result;
 }
+
+//----------------- task C -----------------
+
+void gogeta(std::vector<int> &goku, std::vector<int> &vegeta)
+{
+  for (int i = 0; i < vegeta.size(); i++)
+    goku.push_back(vegeta[i]);
+  vegeta.clear();
+}
