@@ -10,3 +10,14 @@ std::vector<int> makeVector(int n)
     v.push_back(i);
   return v;
 }
+
+//----------------- task B -----------------
+
+std::vector<int> goodVibes(const std::vector<int> &v)
+{
+  std::vector<int> result;
+  for (int i = 0; i < v.size(); i++)
+    if (v[i] > 0)
+      result.push_back(v[i]);
+  return result;
+}

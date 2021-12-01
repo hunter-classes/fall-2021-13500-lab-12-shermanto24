@@ -18,3 +18,18 @@ TEST_CASE("makeVector tests")
   v = makeVector(-5);
   CHECK(v.empty());
 }
+
+//----------------- task B -----------------
+
+TEST_CASE("goodVibes tests")
+{
+  std::vector<int> v1{0, 1, -1, 2, -2, 3, -3};
+  v1 = goodVibes(v1);
+  std::vector<int> v2{1, 2, 3};
+  for (int i = 0; i < v1.size(); i++)
+    CHECK(v1[i] == v2[i]);
+
+  std::vector<int> v3{-10, -20, -30};
+  v3 = goodVibes(v3);
+  CHECK(v3.empty());
+}
