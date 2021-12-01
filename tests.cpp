@@ -55,3 +55,32 @@ TEST_CASE("gogeta tests")
     CHECK(v1[i] == combo13[i]);
   CHECK(v3.empty());
 }
+
+//----------------- task D -----------------
+
+TEST_CASE("sumPairWise tests")
+{
+  //first vector passed is bigger
+  std::vector<int> v1{2, 4, 3};
+  std::vector<int> v2{-1, -2};
+  std::vector<int> sum12 = sumPairWise(v1, v2);
+  std::vector<int> correct_sum12 = {1, 2, 3};
+
+  for (int i = 0; i < sum12.size(); i++)
+    CHECK(sum12[i] == correct_sum12[i]);
+
+  //second vector passed is bigger
+  std::vector<int> v3{4, 4, 1};
+  std::vector<int> sum23 = sumPairWise(v2, v3);
+  std::vector<int> correct_sum23 = {3, 2, 1};
+
+  for (int i = 0; i < sum23.size(); i++)
+    CHECK(sum23[i] == correct_sum23[i]);
+
+  //vectors have equal sizes
+  std::vector<int> sum13 = sumPairWise(v1, v3);
+  std::vector<int> correct_sum13 = {6, 8, 4};
+
+  for (int i = 0; i < sum13.size(); i++)
+    CHECK(sum13[i] == correct_sum13[i]);
+}

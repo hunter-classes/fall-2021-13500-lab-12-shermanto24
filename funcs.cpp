@@ -30,3 +30,31 @@ void gogeta(std::vector<int> &goku, std::vector<int> &vegeta)
     goku.push_back(vegeta[i]);
   vegeta.clear();
 }
+
+//----------------- task D -----------------
+
+std::vector<int> sumPairWise(const std::vector<int> &v1, const std::vector<int> &v2)
+{
+  std::vector<int> smaller, bigger, result;
+
+  if (v1.size() >= v2.size())
+  {
+    bigger = v1;
+    smaller = v2;
+  }
+  else
+  {
+    bigger = v2;
+    smaller = v1;
+  }
+
+  for (int i = 0; i < bigger.size(); i++)
+  {
+    if (i >= smaller.size())
+      result.push_back(bigger[i]);
+    else
+      result.push_back(bigger[i] + smaller[i]);
+  }
+
+  return result;
+}

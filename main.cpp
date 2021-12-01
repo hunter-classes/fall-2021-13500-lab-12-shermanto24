@@ -50,4 +50,24 @@ int main()
       std::cout << ", ";
   }
   std::cout << "c2.empty() = " << c2.empty() << '\n';
+
+  //task D
+  std::cout << "\nTask D\n" << '\n';
+
+  std::vector<int> d1{1, 2, 3};
+  std::cout << "d1 = {1, 2, 3}" << '\n';
+  std::vector<int> d2{4, 5};
+  std::cout << "d2 = {4, 5}" << '\n';
+
+  std::vector<int> d3 = sumPairWise(d1, d2);
+  std::cout << "\nAfter calling sumPairWise(d1, d2)" << '\n';
+  std::cout << "d3 = {";
+  for (int i = 0; i < d3.size(); i++)
+  {
+    std::cout << d3[i];
+    if (d3[i] == d3.back())
+      std::cout << "}" << '\n';
+    else
+      std::cout << ", ";
+  }
 }
